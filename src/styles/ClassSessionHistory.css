@@ -1,0 +1,205 @@
+/* ClassSessionHistory.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.class-session-history-container {
+  background-color: white;
+  height: 100%;
+}
+
+.class-session-history-header {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: auto;
+  padding: 20px 0;
+  align-items: center;
+}
+
+.class-session-history-header-text {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.create-btn {
+  padding: 12px 0;
+  width: 120px;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  background-color: tomato;
+}
+
+.create-btn:hover {
+  cursor: pointer;
+  background-color: #ff8872;
+}
+
+.record-container {
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  width: 95%;
+  margin: auto;
+  height: calc(100vh - 150px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.class-session-history-head-text-and-search-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #ccc;
+}
+
+.class-session-history-head-text {
+  flex-basis: 30%;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.class-session-history-search-container {
+  flex-basis: 30%;
+  position: relative;
+}
+
+.class-session-history-search-container input[type="text"] {
+  width: 100%;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  height: 30px;
+  padding-left: 30px;
+}
+
+.class-session-history-search-icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+}
+
+.class-session-history-table-container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-x: auto; /* Enable horizontal scrolling */
+}
+
+.class-session-history-table-container table {
+  min-width: 800px; /* Set a minimum width to ensure the table overflows on smaller screens */
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.class-session-history-table-header {
+  background-color: #f0f0f0;
+}
+
+.class-session-history-table-header th {
+  padding: 10px;
+  border: none;
+  text-align: left;
+  width: 12.5%;
+}
+
+.class-session-history-table-data {
+  padding: 10px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.class-session-history-table-data:hover {
+  background-color: #f5f5f5;
+}
+
+.class-session-history-table-data td {
+  padding: 10px;
+  border: none;
+  text-align: left;
+  width: 12.5%;
+}
+
+.class-session-history-actions .FaQrcode{
+  margin-right: 5px;
+}
+
+.class-session-history-actions .FaQrcode:hover {
+  color: darkred;
+}
+
+.class-session-history-actions .FaTrash:hover {
+  color: tomato;
+}
+
+.delete-confirm-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.delete-confirm-modal {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.delete-confirm-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.delete-confirm-buttons button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.delete-confirm-buttons button:first-child {
+  background-color: tomato;
+  color: #fff;
+}
+
+.delete-confirm-buttons button:last-child {
+  background-color: #ccc;
+}
+
+.no-class-session-found {
+  color: lightgrey;
+  position: absolute;
+  bottom: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  text-align: center;
+}
+
+@media (max-width: 800px) {
+  .sidebar-container {
+    display: none;
+  }
+
+  .no-class-session-found {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    text-align: center;
+  }
+}

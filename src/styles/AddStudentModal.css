@@ -1,0 +1,68 @@
+/* AddStudentModal.css */
+.add-student-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: 1000; /* Ensure this is higher than any other elements on the page */
+}
+
+.add-student-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  width: 90%; /* Use percentage-based width */
+  max-width: 500px; /* Set a maximum width */
+  padding: 30px; /* Add more padding */
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1001; /* Ensure this is higher than the overlay */
+}
+
+.add-student-modal h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.add-student-modal .form-group {
+  margin-bottom: 20px;
+}
+
+.add-student-modal .form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.add-student-modal .form-group input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.add-student-modal .add-student-submit-button {
+  width: 100%; /* Make the button full width */
+  background-color: tomato;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.add-student-modal .add-student-submit-button:hover {
+  background-color: darkred;
+}
+
+/* Add media query for smaller screens */
+@media (max-width: 500px) {
+  .add-student-modal {
+      width: 95%; /* Increase the percentage-based width */
+      padding: 20px; /* Reduce the padding */
+  }
+}

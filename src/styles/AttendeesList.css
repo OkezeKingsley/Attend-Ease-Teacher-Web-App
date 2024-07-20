@@ -1,0 +1,340 @@
+/* AttendeesList.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.attendees-list-container {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20px; /* Ensure there's some padding at the bottom */
+}
+
+.attendees-list-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.attendees-list-header-text-container {
+  display: flex;
+  align-items: center;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 22px;
+  color: tomato;
+}
+
+.back-btn:hover {
+  color: darkred;
+}
+
+.attendees-list-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-left: 20px;
+}
+
+.qr-code-btn {
+  font-size: 25px;
+  border: none;
+  background: none;
+  margin-right: 10px;
+}
+
+.qr-code-btn:hover {
+  color: darkred;
+  cursor: pointer;
+}
+
+.attendees-text-and-search-container {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  justify-content: space-between;
+}
+
+.attendees-search-bar-container {
+  flex-basis: 30%;
+  position: relative; /* Add relative positioning */
+}
+
+.attendees-search-icon {
+  position: absolute;
+  top: 8px; /* Adjust the top position */
+  left: 8px; /* Adjust the left position */
+  color: #888;
+}
+
+.attendees-search-bar {
+  width: 100%;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  height: 35px;
+  padding-left: 30px;
+}
+
+.attendees-add-student-button-container {
+  flex-basis: 30%;
+}
+
+.attendees-add-student-button {
+  background-color: tomato;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-right: 20px;
+}
+
+.attendees-add-student-button:hover {
+  background-color: darkred;
+}
+
+.attendees-add-student-icon {
+  margin-right: 10px;
+}
+
+.attendees-table-container {
+  overflow-y: auto; /* Ensure vertical scroll */
+  height: calc(100vh - 300px); /* Adjust height to leave space for the footer */
+  margin-bottom: 20px; /* Ensure some space between table and footer */
+  border: 1px solid grey;
+  width: 95%;
+  margin: auto;
+}
+
+.attendees-table-container table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.attendees-table-header {
+  background-color: #f0f0f0;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.attendees-table-header th {
+  padding: 10px;
+  border: none;
+  text-align: left;
+  width: 25%; /* Example for equal column widths */
+  text-align: left;
+  padding: 8px;
+  border-bottom: 2px solid #ddd;
+}
+
+.attendees-table-data {
+  padding: 10px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.attendees-table-data:hover {
+  background-color: #f5f5f5;
+}
+
+.attendees-table-data td {
+  padding: 10px;
+  border: none;
+  width: 25%; /* Example for equal column widths */
+  text-align: left;
+  padding: 8px;
+  justify-content: 'flex-start' 
+}
+
+.attendees-table-data td:last-child {
+  text-align: left;
+  /* background-color: green; */
+  justify-content: 'flex-start' 
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  color: tomato;
+  cursor: pointer;
+  font-size: 18px;
+  text-align: center;
+}
+
+.delete-btn:hover {
+  color: darkred;
+}
+
+
+
+.delete-confirm-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.delete-confirm-modal {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.delete-confirm-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.delete-confirm-buttons button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.delete-confirm-buttons button:first-child {
+  background-color: tomato;
+  color: #fff;
+}
+
+.delete-confirm-buttons button:last-child {
+  background-color: #ccc;
+}
+
+
+
+.no-attendees-found {
+  color: lightgrey;
+  position: absolute;
+  bottom: 40%;
+  left: 60%;
+  transform: translateX(-50%);
+  width: 130;
+  font-size: 20px;
+  text-align: center;
+}
+
+.attendees-footer {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  padding: 10px;
+}
+
+.attendees-footer p {
+  font-size: 17px;
+  font-weight: bold;
+}
+.print-btn {
+  background-color: tomato;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.print-btn:hover {
+  background-color: darkred;
+}
+
+.print-btn svg {
+  margin-right: 7px;
+}
+
+@media (max-width: 800px) {
+  
+  .attendees-search-bar-container {
+    flex-basis: 44%;
+    position: relative; 
+  }
+  
+  .attendees-search-icon {
+    position: absolute;
+    top: 9px; 
+    left: 8px; 
+    color: #888;
+  }
+  
+  .attendees-search-bar {
+    width: 100%;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    height: 36px;
+    padding-left: 30px;
+  }
+
+
+
+
+
+
+  .attendees-add-student-button {
+    background-color: tomato;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 7px;
+    cursor: pointer;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 20px;
+    width: 120px;
+  }
+
+  .attendees-add-student-icon {
+    margin-right: 6px;
+  }
+
+  .no-attendees-found {
+    color: lightgrey;
+    position: absolute;
+    bottom: 40%;
+    left: 55%;
+    transform: translateX(-50%);
+    width: 130;
+    font-size: 20px;
+    text-align: center;
+  }
+  
+}
+
+
+@media(max-width: 500px) {
+  .attendees-add-student-button {
+    font-size: 15px;
+  }
+  .attendees-add-student-icon {
+    margin-right: 4px;
+  }
+
+}
